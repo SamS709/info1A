@@ -79,5 +79,6 @@ if __name__ == '__main__':
         key,val = word, len(word)
         hashtable1.put(key,val)
         print(hashtable1.N)
+    print("done")
     hashtable1.repartition()
 
