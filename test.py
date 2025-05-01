@@ -14,7 +14,5 @@ class Point:
 
 if __name__ == '__main__':
 
-    p = Point(5)
-
-    assert( p.get_x()==5)
+    print(list(range(5)))
 
