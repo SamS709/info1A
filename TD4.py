@@ -46,6 +46,7 @@ class Hashtable:
 
 
 
+<<<<<<< HEAD
 
 def hash(c):
     h = 0
@@ -63,3 +64,41 @@ def hash2(key):
     h ^= (h >> 11)
     h += (h << 15)
     return h
+=======
+if __name__ == '__main__':
+    def hash(c):
+        h = 0
+        for i in c:
+            h += ord(i)
+        return h
+
+    def hash2(c):
+        h=0
+        for c in key:
+            h += ord(c)
+            h += (h << 10)
+            h ^= (h >> 6)
+        h += (h << 3)
+        h ^= (h >> 11)
+        h += (h << 15)
+        return h
+
+    '''print(hash('abc'))
+    print(hash('abcde')%6)
+
+    hashtable = Hashtable(hash,6)
+    hashtable.table = [[], [], [], [['ab', 4]], [], []]
+    hashtable.put('abcde',3)
+    print(hashtable.table)
+    print(hashtable.get("abcd"))
+    hashtable.repartition()'''
+    L = open("mots.sansaccent.txt", "r").read().splitlines()
+    hashtable1 = Hashtable(hash,100)
+    for word in L:
+        key,val = word, len(word)
+        hashtable1.put(key,val)
+        print(hashtable1.N)
+    print("done")
+    hashtable1.repartition()
+
+>>>>>>> b99b6e1d915a55ef6923db65c132552eaba79020
