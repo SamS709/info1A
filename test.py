@@ -14,5 +14,9 @@ class Point:
 
 if __name__ == '__main__':
 
-    print(list(range(5)))
-
+    a = 1
+    if a!=-1:
+        a=-1
+        print(1)
+    else:
+        print(1)
